@@ -1,0 +1,50 @@
+# Python / tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# uv virtualenvs (no leading slash: matches the workspace root and every package)
+.venv/
+
+# secrets
+.env
+.env.*
+!.example.env
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# HPC job logs
+*.o[0-9]*
+*.e[0-9]*
+*.log
+logs/
+
+# large or regenerable artifacts
+*.wav
+*.flac
+*.mp3
+checkpoints/
+*.pt
+*.safetensors
+*.ckpt
+
+# run outputs: keep the JSONL (scored.jsonl is the artifact that survives),
+# ignore only the bulky audio that a TTS stage may write alongside it
+outputs/**/audio/
+
+# staged prompt audio sets (the frozen sets live in seahelm-audio-uploader / HF; only manifests are tracked here)
+data/audio_sets/
+
+# sparse checkout of upstream aisingapore/SEA-HELM pulled by downloader.py (shas recorded in prompts.jsonl instead)
+data/upstream/

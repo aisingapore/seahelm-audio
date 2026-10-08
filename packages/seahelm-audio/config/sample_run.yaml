@@ -1,0 +1,18 @@
+tasks: 
+  IFEval:
+    lang:
+  mmlu:
+    lang:
+
+stt:
+  whisper
+  supported_langs:
+    xxx
+
+llm:
+  sealion
+  supported_langs: 
+    xxx
+
+tts:
+  omnivoice
