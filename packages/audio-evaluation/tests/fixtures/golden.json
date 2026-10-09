@@ -1,0 +1,107 @@
+{
+ "ifeval": {
+  "rows": [
+   {
+    "filename": "seahelm_ifeval_en_000000.wav",
+    "language": "en",
+    "spoken_text": "I am a software engineer with 7 years of experience, and I am looking for a new job. Can you create a resume for me and explain each section?\n\nFirst repeat the exact request above, then give your answer. Do not say any word before repeating the exact request.",
+    "transcript": "I am a software engineer with seven years of experience, and I am looking for a new job. Can you create a resume for me and explain each section? First repeat the exact request above, then give your answer. Do not say any word before repeating the exact request",
+    "reply": "I am a software engineer with seven years of experience, and I am looking for a new job. Can you create a resume for me and explain each section? First repeat the exact request above, then give your answer. Do not say any word before repeating the exact request\n\n***\n\nHere is a tailored resume template designed for a Senior Software Engineer with seven years of experience, followed by a detailed explanation of why each section is structured this way.\n\n### **Resume Template: Senior Software Engineer**\n\n**[Your Full Name]**\n[City, State, Zip Code] | [Phone Number] | [Email Address]\n[LinkedIn Profile URL] | [GitHub/Portfolio URL]\n\n**Professional Summary**\nResults-driven Senior Software Engineer with 7 years of experience designing, developing, and deploying scalable distributed systems. Proven track record of leading cross-functional teams, optimizing system performance by 40%, and reducing deployment times through CI/CD automation. Expertise in [Primary Language, e.g., Java/Python], [Cloud Platform, e.g., AWS/Azure], and microservices architecture. Committed to delivering high-quality code and mentoring junior developers to foster engineering excellence.\n\n**Technical Skills**\n*   **Languages:** Java, Python, TypeScript, SQL, Go\n*   **Frameworks & Libraries:** Spring Boot, React, Django, Node.js\n*   **Cloud & DevOps:** AWS (EC2, Lambda, S3), Docker, Kubernetes, Jenkins, Terraform\n*   **Databases:** PostgreSQL, MongoDB, Redis, Elasticsearch\n*   **Methodologies:** Agile/Scrum, TDD, CI/CD, Microservices, RESTful APIs\n\n**Professional Experience**\n\n**Senior Software Engineer** | [Current Company Name] | [City, State]\n*Month Year – Present*\n*   Architected and led the migration of a monolithic legacy application to a microservices-based architecture, resulting in a 35% increase in system scalability and a 20% reduction in server costs.\n*   Mentored a team of 5 junior engineers, conducting code reviews and establishing best practices that reduced bug rates by 25% over two years.\n*   Implemented automated testing pipelines using Jenkins and Selenium, decreasing release cycles from bi-weekly to daily deployments.\n*   Collaborated with product managers and stakeholders to define technical requirements for high-traffic features, handling over 100k daily active users.\n\n**Software Engineer** | [Previous Company Name] | [City, State]\n*Month Year – Month Year*\n*   Developed and maintained RESTful APIs using Spring Boot, serving data to mobile and web applications with 99.9% uptime.\n*   Optimized database queries in PostgreSQL, reducing average response time from 500ms to 120ms for critical user-facing endpoints.\n*   Integrated third-party payment gateways (Stripe, PayPal), ensuring PCI-DSS compliance and secure transaction processing.\n*   Participated in on-call rotation, resolving critical production incidents within SLA timeframes and documenting post-mortem analyses.\n\n**Junior Software Engineer** | [Earliest Company Name] | [City, State]\n*Month Year – Month Year*\n*   Built responsive front-end components using React and TypeScript, improving user engagement metrics by 15%.\n*   Assisted in the design and implementation of unit tests, achieving 85% code coverage across core modules.\n*   Collaborated with QA teams to identify and resolve defects during the sprint cycle.\n\n**Education**\n**Bachelor of Science in Computer Science**\n[University Name], [City, State]\n*Graduation Year*\n\n**Certifications & Awards**\n*   AWS Certified Solutions Architect – Associate (2023)\n*   Employee of the Quarter – [Company Name] (2022)\n*   Hackathon Winner – [Event Name] (2021)\n\n---\n\n### **Explanation of Each Section**\n\n#### **1. Header**\n*   **Purpose:** Provides immediate contact information.\n*   **Why it matters:** Recruiters need to find you quickly. Including links to LinkedIn and GitHub is crucial for software engineers because it allows them to verify your professional network and see your actual code contributions.\n\n#### **2. Professional Summary**\n*   **Purpose:** A \"elevator pitch\" that highlights your years of experience, core competencies, and biggest achievements.\n*   **Why it matters:** With seven years of experience, you are no longer an entry-level candidate. This section immediately positions you as a senior professional. It should focus on *value* (e.g., \"reduced costs,\" \"increased scalability\") rather than just listing duties.\n\n#### **3. Technical Skills**\n*   **Purpose:** A quick-scan list of your hard skills.\n*   **Why it matters:** Many companies use Applicant Tracking Systems (ATS) to filter resumes based on keywords. Grouping skills by category (Languages, Cloud, Databases) makes it easy for hiring managers to see if you match their tech stack.\n\n#### **4. Professional Experience**\n*   **Purpose:** The core of your resume, detailing your work history in reverse chronological order.\n*   **Why it matters:**\n    *   **Action-Oriented Bullets:** Each bullet starts with a strong verb (Architected, Developed, Optimized).\n    *   **Quantifiable Results:** Notice the use of numbers (35% increase, 20% reduction, 100k users). At the senior level, employers want to see the *impact* of your work, not just a list of tasks.\n    *   **Progression:** The roles show a clear trajectory from Junior to Senior, demonstrating growth in responsibility (e.g., moving from writing code to mentoring teams and architecting systems).\n\n#### **5. Education**\n*   **Purpose:** Lists your degree and university.\n*   **Why it matters:** While experience is more important for a senior role, the degree is still a standard requirement for many tech companies. Since you have 7 years of experience, this section is kept brief and placed near the bottom.\n\n#### **6. Certifications & Awards**\n*   **Purpose:** Highlights additional validation of your skills and recognition of your performance.\n*   **Why it matters:** Cloud certifications (like AWS or Azure) are highly valued in the industry. Awards demonstrate that you are not just competent but also recognized by your peers and management for excellence.\n\n### **Tips for Customization**\n*   **Tailor to the Job Description:** If a job posting emphasizes \"Kubernetes\" and \"Go,\" ensure those keywords appear prominently in your Skills and Experience sections.\n*   **Keep it Concise:** For 7 years of experience, a one-page resume is often too short, but two pages is the standard limit. Ensure every line adds value.\n*   **Proofread:** Technical precision is expected in your code; it is also expected in your resume. Ensure there are no typos.",
+    "audio_in": "seahelm_ifeval_en_000000.wav",
+    "audio_out": null
+   },
+   {
+    "filename": "seahelm_ifeval_en_000001.wav",
+    "language": "en",
+    "spoken_text": "Could you give me a short summary of The Lord of the Rings that is child-friendly?\nFirst, repeat \"Could you give me a short summary of The Lord of the Rings that is child-friendly?\" word for word without change, then give your answer. Do not say anything first, just repeat the request at the very beginning.",
+    "transcript": "Could you give me a short summary of The Lord of the Rings that is child-friendly? First, repeat. Could you give me a short summary of The Lord of the Rings that is child-friendly? Word for word without change, then give your answer. Do not say anything first, just repeat the request at the very beginning",
+    "reply": "Could you give me a short summary of The Lord of the Rings that is child-friendly? First, repeat. Could you give me a short summary of The Lord of the Rings that is child-friendly? Word for word without change, then give your answer. Do not say anything first, just repeat the request at the very beginning\n\nIn a magical land called Middle-earth, a small but brave hobbit named Frodo finds a powerful golden ring that belongs to a dark villain named Sauron. This ring has the power to control others and bring darkness to the world. Frodo knows he must destroy it before Sauron gets it, so he sets off on a long and dangerous journey with his loyal friend Sam and a group of heroes called the Fellowship. Along the way, they face scary creatures, solve puzzles, and learn that even the smallest person can make a big difference. With courage, friendship, and help from wizards and elves, Frodo finally throws the ring into a fiery mountain, defeating the dark lord and bringing peace and light back to Middle-earth.",
+    "audio_in": "seahelm_ifeval_en_000001.wav",
+    "audio_out": null
+   },
+   {
+    "filename": "seahelm_ifeval_en_000002.wav",
+    "language": "en",
+    "spoken_text": "Why do people consider the 2nd Amendment to be outdated?\n\nBefore you answer, just repeat the question above. You need to repeat it exactly as it is. Do not change any word.",
+    "transcript": "Why do people consider the Second Amendment to be outdated? Before you answer, just repeat the question above. You need to repeat it exactly as it is. Do not change any word",
+    "reply": "Why do people consider the Second Amendment to be outdated? Before you answer, just repeat the question above. You need to repeat it exactly as it is. Do not change any word\n\nPeople who consider the Second Amendment outdated often point to the significant changes in society, technology, and the nature of defense since the amendment was ratified in 1791. Their arguments generally center on a few key areas:\n\n*   **Changes in Military Technology:** The amendment was written in an era when the primary weapons were muskets and flintlocks. Critics argue that the original intent was to ensure a militia could defend against foreign invasion or tyranny using the weapons of the time. They contend that modern military-grade firearms, such as automatic weapons and high-capacity magazines, are fundamentally different from the \"arms\" envisioned by the Founding Fathers and are not necessary for self-defense or a well-regulated militia.\n*   **The Evolution of the Militia:** In the 18th century, the \"militia\" referred to able-bodied citizens who would bring their own weapons to defend their communities. Today, the United States has a professional standing army and National Guard. Critics argue that the concept of a citizen militia is obsolete in the modern context, making the original rationale for widespread gun ownership less relevant.\n*   **Public Safety and Gun Violence:** A major contemporary concern is the high rate of gun violence, including mass shootings, suicides, and homicides, in the United States compared to other developed nations. Those who view the amendment as outdated often believe that strict gun control measures are necessary to address these public health crises, arguing that the right to bear arms should not supersede the right to safety in public spaces.\n*   **Urbanization and Lifestyle Changes:** The United States has shifted from a largely agrarian society to a highly urbanized one. Critics suggest that the need for firearms for hunting or protecting livestock on large farms is less prevalent in dense cities, where the risks of accidental discharge or misuse are higher.\n\nIt is important to note that this is a deeply debated topic. Supporters of the Second Amendment argue that it remains vital for individual self-defense, protection against government overreach, and as a fundamental liberty that should not be diminished by changing circumstances. The interpretation of the amendment continues to be a central issue in American legal and political discourse.",
+    "audio_in": "seahelm_ifeval_en_000002.wav",
+    "audio_out": null
+   }
+  ],
+  "gold": {
+   "seahelm_ifeval_en_000000.wav": {
+    "language": "en",
+    "category": "combination",
+    "subcategory": "combination:repeat_prompt",
+    "kwargs": {
+     "prompt_to_repeat": "I am a software engineer with 7 years of experience, and I am looking for a new job. Can you create a resume for me and explain each section?"
+    }
+   },
+   "seahelm_ifeval_en_000001.wav": {
+    "language": "en",
+    "category": "combination",
+    "subcategory": "combination:repeat_prompt",
+    "kwargs": {
+     "prompt_to_repeat": "Could you give me a short summary of The Lord of the Rings that is child-friendly?"
+    }
+   },
+   "seahelm_ifeval_en_000002.wav": {
+    "language": "en",
+    "category": "combination",
+    "subcategory": "combination:repeat_prompt",
+    "kwargs": {
+     "prompt_to_repeat": "Why do people consider the 2nd Amendment to be outdated?"
+    }
+   }
+  }
+ },
+ "mmlu_lite": {
+  "rows": [
+   {
+    "filename": "seahelm_global_mmlu_lite_zh_000000.wav",
+    "language": "zh",
+    "spoken_text": "仅使用以下格式回答。\n\"答案:\"\n将 答案 替换为您选择的答案。使用字母 第一、第二、第三 或 第四 作为答案。\n\n问题:\n```\n从美国向北进入加拿大时，您会看到北星（北极星）越来越_________。\n```\n第一: 亮\n第二: 在天空中更高\n第三: 暗\n第四: 在天空中更低",
+    "transcript": "请使用以下格式回答。答案：将答案替换为您选择的答案，使用字母第一、第二、第三或第四作为答案问题。从美国向北进入加拿大时，您会看到北星。北极星越来越：第一，亮。第二，在天空中更高。第三，在天空中更低。",
+    "reply": "答案：第二",
+    "audio_in": "seahelm_global_mmlu_lite_zh_000000.wav",
+    "audio_out": null
+   },
+   {
+    "filename": "seahelm_global_mmlu_lite_zh_000001.wav",
+    "language": "zh",
+    "spoken_text": "仅使用以下格式回答。\n\"答案:\"\n将 答案 替换为您选择的答案。使用字母 第一、第二、第三 或 第四 作为答案。\n\n问题:\n```\n在月球上，最重的是什么？\n```\n第一: 五千克羽毛\n第二: 一千克羽毛\n第三: 在地球上测量重五磅的砖\n第四: 一千克砖",
+    "transcript": "仅使用以下格式回答答案，将答案替换为您选择的答案。使用字母第一、第二、第三或第四作为答案。问题，这在月球上最重的是什么？这第一，五千克羽毛，第二一千克羽毛，第三，在地球上测量重五磅的砖，第四一千克砖。",
+    "reply": "第一",
+    "audio_in": "seahelm_global_mmlu_lite_zh_000001.wav",
+    "audio_out": null
+   },
+   {
+    "filename": "seahelm_global_mmlu_lite_zh_000002.wav",
+    "language": "zh",
+    "spoken_text": "仅使用以下格式回答。\n\"答案:\"\n将 答案 替换为您选择的答案。使用字母 第一、第二、第三 或 第四 作为答案。\n\n问题:\n```\n根据 Schnackenberg 和 Tomlinson（2014 年）的观点，可以用来评估企业透明度质量的三个标准是什么？\n```\n第一: 披露、清晰度、准确性\n第二: 广度、清晰度、准确性\n第三: 披露、详情、准确性\n第四: 披露、清晰度、效率",
+    "transcript": "请使用以下格式回答。答案将答案替换为您选择的答案。使用字母第一、第二、第三或第四作为答案。问题：根据 Schnackenberg 和 Tomlinson 二零一四年年的观点，可以用来评估企业透明度质量的三个标准是什么？第一，披露清晰度准确性。第二，广度清晰度准确性。第三，披露详情准确性。第四，披露清晰度效率。",
+    "reply": "第二",
+    "audio_in": "seahelm_global_mmlu_lite_zh_000002.wav",
+    "audio_out": null
+   }
+  ],
+  "gold": {
+   "seahelm_global_mmlu_lite_zh_000000.wav": {
+    "language": "zh",
+    "label": "B",
+    "subject": "astronomy"
+   },
+   "seahelm_global_mmlu_lite_zh_000001.wav": {
+    "language": "zh",
+    "label": "A",
+    "subject": "astronomy"
+   },
+   "seahelm_global_mmlu_lite_zh_000002.wav": {
+    "language": "zh",
+    "label": "A",
+    "subject": "business_ethics"
+   }
+  }
+ }
+}
