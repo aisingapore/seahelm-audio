@@ -204,6 +204,16 @@ def run(data: Path, out: Path, limit: int = 0, include_tts: bool = False) -> Non
     models = load_models(include_tts=include_tts)
     stt, llm, tts = models["stt"], models["llm"], models["tts"]
 
+    # Track what models were used
+    pipeline_metadata_path = out / "metadata.json"
+    with open(pipeline_metadata_path, "w", encoding="utf-8") as f:
+        metadata = {
+            "stt": type(stt).__name__,
+            "llm": type(llm).__name__,
+            "tts": type(tts).__name__ if tts else None,
+        }
+        json.dump(metadata, f, ensure_ascii=False)
+
     rows = load_rows(data)
     if limit:
         rows = islice(rows, limit)
