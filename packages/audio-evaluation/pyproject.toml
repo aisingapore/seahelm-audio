@@ -8,9 +8,16 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "fast-langdetect==0.3.2",
     "huggingface-hub>=2.1.1",
+    "jieba>=0.42.1",
+    "jiwer>=4.0.0",
     "loguru>=0.7.3",
+    "pyarrow>=25.0.1",
+    "pythainlp>=5.4.0",
     "python-dotenv>=1.2.4",
+    "whisper-normalizer>=0.1.15",
+    "zhconv>=1.4.3",
 ]
 
 [project.scripts]
