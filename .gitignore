@@ -44,6 +44,7 @@ checkpoints/
 # Un-ignore a specific results file with a `!path` line if a run's scores should be kept in git.
 outputs/**/audio/
 outputs/**/metadata.json
+outputs/**/summary.json
 *.parquet
 *.jsonl
 !packages/*/src/**/*.jsonl
