@@ -43,10 +43,13 @@ checkpoints/
 # and tests, so config files (e.g. a task's replacements.jsonl) and fixtures stay tracked.
 # Un-ignore a specific results file with a `!path` line if a run's scores should be kept in git.
 outputs/**/audio/
+outputs/**/metadata.json
 *.parquet
 *.jsonl
 !packages/*/src/**/*.jsonl
 !packages/*/tests/**/*.jsonl
+# a run started from inside a package's src/ would otherwise be re-included by the line above
+packages/*/src/**/outputs/
 
 # staged prompt audio sets (the frozen sets live in seahelm-audio-uploader / HF; only manifests are tracked here)
 data/audio_sets/
