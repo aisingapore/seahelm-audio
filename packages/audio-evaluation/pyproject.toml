@@ -1,5 +1,5 @@
 [project]
-name = "seahelm-audio"
+name = "audio-evaluation"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -8,11 +8,13 @@ authors = [
 ]
 requires-python = ">=3.11"
 dependencies = [
+    "huggingface-hub>=2.1.1",
+    "loguru>=0.7.3",
     "python-dotenv>=1.2.4",
 ]
 
 [project.scripts]
-seahelm-audio = "seahelm_audio:main"
+audio-evaluation = "audio_evaluation:main"
 
 [build-system]
 requires = ["uv_build>=0.12.6,<0.13.0"]

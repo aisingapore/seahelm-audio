@@ -1,5 +1,5 @@
 [project]
-name = "seahelm-models"
+name = "model-pipeline"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -7,10 +7,16 @@ authors = [
     { name = "Yixian Tan", email = "yixian@aisingapore.org" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "elevenlabs>=2.71.0",
+    "openai>=3.26.0",
+    "pyarrow>=25.0.1",
+    "python-dotenv>=1.2.4",
+    "tqdm>=4.70.1",
+]
 
 [project.scripts]
-seahelm-models = "seahelm_models:main"
+model-pipeline = "model_pipeline:main"
 
 [build-system]
 requires = ["uv_build>=0.12.6,<0.13.0"]
