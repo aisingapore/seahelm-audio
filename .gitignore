@@ -39,9 +39,14 @@ checkpoints/
 *.safetensors
 *.ckpt
 
-# run outputs: keep the JSONL (scored.jsonl is the artifact that survives),
-# ignore only the bulky audio that a TTS stage may write alongside it
+# run outputs and data files. JSONL is ignored everywhere except package source
+# and tests, so config files (e.g. a task's replacements.jsonl) and fixtures stay tracked.
+# Un-ignore a specific results file with a `!path` line if a run's scores should be kept in git.
 outputs/**/audio/
+*.parquet
+*.jsonl
+!packages/*/src/**/*.jsonl
+!packages/*/tests/**/*.jsonl
 
 # staged prompt audio sets (the frozen sets live in seahelm-audio-uploader / HF; only manifests are tracked here)
 data/audio_sets/
