@@ -1,5 +1,6 @@
 """The scorer refuses bad inputs before scoring anything."""
 
+import pytest
 from audio_evaluation.score import join_report, report_problems, validate_rows
 from audio_evaluation.tasks.registry import TASKS, resolve_task
 
@@ -42,11 +43,12 @@ def test_join_report_flags_missing_gold_language_and_prefix():
 
 
 def test_task_resolution_order():
-    assert resolve_task("mmlu_lite").kind == "mcq"
-    assert resolve_task(None, "outputs/pipeline/ifeval/results.jsonl").name == "ifeval"
+    assert resolve_task("outputs/pipeline/ifeval/results.jsonl").name == "ifeval"
     assert (
         resolve_task(
-            None, "/nowhere/results.jsonl", ["seahelm_global_mmlu_lite_zh_000000.wav"]
+            "/nowhere/results.jsonl", ["seahelm_global_mmlu_lite_zh_000000.wav"]
         ).name
         == "mmlu_lite"
     )
+    with pytest.raises(ValueError):
+        resolve_task("/nowhere/results.jsonl", ["other.wav"])

@@ -88,6 +88,18 @@ One object per line in the file. Two real rows from the reference pipeline, one 
 
 `audio_in` and `audio_out` are extras the reference pipeline adds (`audio_out` is filled only with `--tts`); they are optional.
 
+### Where to put the results file
+
+Each result file should be in a named folder after that task. 
+
+```
+<RUN_FOLDER>/
+  ifeval/results.jsonl
+  mmlu_lite/results.jsonl
+```
+
+Currently supported task names are `ifeval`, `mmlu_lite`.
+
 ## Packages
 We include 2 packages (`root/packages`) within the repo; `model-pipeline` and `audio-evaluation`.
 - `model-pipeline` provides a guideline on how to arrange the outputs, and a possible cascaded system flow to follow. However direct speech-to-text models will work as well.
@@ -112,11 +124,13 @@ uv run python -m model_pipeline.main                                            
 uv run python -m model_pipeline.main --out outputs/pipeline_sealion_v45 --tts   # named run, also synthesise each reply to audio
 ```
 
-| option | meaning |
-|---|---|
-| `--out DIR` | output directory, default `outputs/pipeline` |
-| `--limit N` | stop after N rows per task; 0 (the default) means all |
-| `--tts` | synthesise each reply into `audio_out/`, off by default |
+| option | required | meaning |
+|---|---|---|
+| `--out DIR` | optional | output directory, default `outputs/pipeline` |
+| `--limit N` | optional | stop after N rows per task; 0 (the default) means all |
+| `--tts` | optional | synthesise each reply into `audio_out/`, off by default |
+
+There are no required flags: a bare run processes every row of every task under `data/seahelm_audio_data/`. The two API keys in `.env` are the only mandatory inputs.
 
 Each task writes `<OUTPUT_FOLDER>/<task>/results.jsonl`, a `metadata.json` naming the models used, `audio_in/<language>/` with the extracted prompt clips and, with `--tts`, `audio_out/<language>/`. Runs are resumable: rows whose `filename` is already in `results.jsonl` are skipped.
 
@@ -127,7 +141,7 @@ This contains the actual evaluation code, taking in the results and scoring them
 
 ```bash
 uv run audio-evaluation download --dest <DESTINATION_FOLDER> [--revision <COMMIT_SHA>]
-uv run audio-evaluation score --results <RESULTS_FILE> [--dry-run] [--task <TASK>] [--data-root <DATASET_FOLDER>] [--out <OUTPUT_FOLDER>]
+uv run audio-evaluation score --results <RESULTS_FILE> [--dry-run] [--data-root <DATASET_FOLDER>] [--out <OUTPUT_FOLDER>]
 
 # download example (optionl)
 uv run audio-evaluation download --dest data/seahelm_audio_data --revision 627a26bfde4f9b12b287abf500208221bff1af3a
@@ -137,12 +151,14 @@ uv run audio-evaluation score --results outputs/pipeline/ifeval/results.jsonl --
 uv run audio-evaluation score --results outputs/pipeline/mmlu_lite/results.jsonl --data-root data/seahelm_audio_data --out outputs/evaluation/mmlu_lite
 ```
 
-| option | meaning |
-|---|---|
-| `--dry-run` | print the join report (rows matched to gold, missing rows, language or filename-prefix mismatches) and stop; exits non-zero on problems |
-| `--task` | override task inference, which otherwise uses the results file's parent directory name or the filename prefix |
-| `--data-root` | dataset snapshot root, default `data/seahelm_audio_data` |
-| `--out` | output directory, default `outputs/evaluation/<task>` |
+| option | command | required | meaning |
+|---|---|---|---|
+| `--results` | `score` | **required** | the `results.jsonl` to score |
+| `--dest` | `download` | optional | where to put the snapshot, default `data/seahelm_audio_data` |
+| `--revision` | `download` | optional | Hub commit to pin; default is the Hub's current revision |
+| `--dry-run` | `score` | optional | print the join report (rows matched to gold, missing rows, language or filename-prefix mismatches) and stop; exits non-zero on problems |
+| `--data-root` | `score` | optional | dataset snapshot root, default `data/seahelm_audio_data` |
+| `--out` | `score` | optional | output directory, default `outputs/evaluation/<task>` |
 
 Outputs per run:
 

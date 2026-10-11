@@ -76,14 +76,16 @@ TASKS: dict[str, TaskSpec] = {
 
 
 def resolve_task(
-    name: str | None = None,
     results_path: str | Path | None = None,
     filenames: list[str] | None = None,
 ) -> TaskSpec:
-    """Pick the task: explicit name, else the results file's parent dir, else filename prefix.
+    """Pick the task from the results file's parent dir, else from the filename prefix.
+
+    There is no explicit override: a results file is one task, and the task is always
+    recoverable from where the file sits (``<run>/<task>/results.jsonl``) or from the
+    dataset filenames inside it (``seahelm_<task>_...``).
 
     Args:
-        name (str | None): Explicit task name (a key of ``TASKS``).
         results_path (str | Path | None): Path of the results file; its parent directory
             name is tried as the task name (``outputs/pipeline/<task>/results.jsonl``).
         filenames (list[str] | None): Sample filenames; the first one's prefix is tried.
@@ -94,10 +96,6 @@ def resolve_task(
     Raises:
         ValueError: If nothing identifies a known task.
     """
-    if name:
-        if name not in TASKS:
-            raise ValueError(f"unknown task {name!r}; known: {sorted(TASKS)}")
-        return TASKS[name]
     if results_path is not None:
         parent = Path(results_path).resolve().parent.name
         if parent in TASKS:
@@ -107,5 +105,6 @@ def resolve_task(
             if filenames[0].startswith(spec.filename_prefix):
                 return spec
     raise ValueError(
-        "could not infer the task: pass --task, or keep results under outputs/<...>/<task>/"
+        "could not infer the task: keep the results file under <run>/<task>/results.jsonl "
+        f"with <task> one of {sorted(TASKS)}, and use the dataset's sample filenames"
     )

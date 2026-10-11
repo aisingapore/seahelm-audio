@@ -22,7 +22,7 @@ from . import score as score_mod
 from .common.jsonl import read_jsonl, write_jsonl
 from .gold import load_gold
 from .summary import summarize
-from .tasks.registry import TASKS, resolve_task
+from .tasks.registry import resolve_task
 
 DEFAULT_DATA_ROOT = "data/seahelm_audio_data"
 
@@ -65,9 +65,6 @@ def register_score(subparsers) -> None:
         "--data-root", default=DEFAULT_DATA_ROOT, help="Dataset snapshot root."
     )
     p.add_argument(
-        "--task", choices=sorted(TASKS), default=None, help="Override task inference."
-    )
-    p.add_argument(
         "--out", default=None, help="Output dir (default outputs/evaluation/<task>)."
     )
     p.add_argument(
@@ -95,7 +92,7 @@ def cmd_score(args: argparse.Namespace) -> int:
             logger.error(p)
         return 2
 
-    spec = resolve_task(args.task, results_path, [r["filename"] for r in rows])
+    spec = resolve_task(results_path, [r["filename"] for r in rows])
     data_root = Path(args.data_root)
     gold = load_gold(spec, data_root, {r["filename"] for r in rows})
     report = score_mod.join_report(rows, gold, spec)
