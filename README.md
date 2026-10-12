@@ -63,7 +63,7 @@ The results file provide the necessary interface for using the audio evaluation.
 | `transcript` | your STT output for the prompt audio, i.e. what the LLM saw |
 | `reply` | your system's answer to the prompt; used for scoring |
 
-One object per line in the file. Two real rows from the reference pipeline, one per task, shown indented here for readability and with the long texts shortened:
+Sample `JSONL` formatting
 
 ```json
 {
