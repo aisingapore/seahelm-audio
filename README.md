@@ -3,7 +3,7 @@
 # SEA-HELM Audio
 
 <p align="center">
-   <strong>An adaption of <a href="https://github.com/aisingapore/SEA-HELM">SEA-HELM</a> for audio agents</strong><br>
+   <strong>An adaption of <a href="https://github.com/aisingapore/SEA-HELM">SEA-HELM</a> for speech agents</strong><br>
 </p>
 
 </div>
