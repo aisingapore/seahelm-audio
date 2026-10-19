@@ -189,3 +189,30 @@ uv tool install pre-commit    # once
 pre-commit install            # once per clone, runs on every commit
 pre-commit run --all-files    # on demand
 ```
+## Technical Report and Citation
+
+If you utilize this corpus or our methodology in your work, please cite the corresponding paper:
+
+```
+@article{seahelm_audio_bench_en_zh_ta_ms_2026,
+    title={SEA-HELM Audio: Evaluating Multilingual ASR-LLM Pipeline Performance Across SEA-HELM Subsets}, 
+    author={Aulia Adila and Yixian Tan and Jonathan Heng and Kunat Pipatanakul and Donghang Wu and Anocha Sutaveephamochanon},
+    year={2026},
+    eprint={2610.19869},
+    archivePrefix={arXiv},
+    primaryClass={cs.SD},
+    url={https://arxiv.org/abs/2610.19869}, 
+}
+
+```
+## Team
+
+AI Products Pillar, AI Singapore
+
+## Acknowledgement
+
+This project is supported by the National Research Foundation Singapore and Infocomm Media Development Authority (IMDA), Singapore under its National Large Language Model Funding Initiative.
+
+## Contact
+
+[**sealion@aisingapore.org**](mailto:sealion@aisingapore.org) 
