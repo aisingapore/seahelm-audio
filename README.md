@@ -5,7 +5,6 @@
 <p align="center">
    <strong>An adaption of <a href="https://github.com/aisingapore/SEA-HELM">SEA-HELM</a> for speech agents</strong><br>
 </p>
-[![arXiv](https://img.shields.io/badge/github-repo-blue?logo=github)](https://arxiv.org/abs/2610.19869)
 </div>
 
 ## Overview
