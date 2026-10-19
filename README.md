@@ -39,6 +39,13 @@ uv sync --all-packages    # one shared venv for both packages (a plain `uv sync`
 
 2. **Produce results.** Run your voice stack over the prompt audio and write one `results.jsonl` per task in the [results format](#results-format) below. Either adapt the reference cascade in `packages/model-pipeline` by swapping its STT / LLM / TTS (optional) classes to models you are interested, or produce the file directly. Speech-to-text LLMs that skip a separate STT stage work too.
 
+   ```bash
+   uv run python -m model_pipeline.main --out <OUTPUT_FOLDER>
+
+   # example (reference pipeline; API keys in packages/model-pipeline/.env)
+   uv run python -m model_pipeline.main --out outputs/pipeline
+   ```
+
 3. **Scoring.** 
 
    ```bash
@@ -51,6 +58,10 @@ uv sync --all-packages    # one shared venv for both packages (a plain `uv sync`
    ```
 
    This writes `scored.jsonl` (one record per sample) and `summary.json` (the aggregate metrics) to `<OUTPUT_FOLDER>`.
+
+### Example script
+
+[`run_example.sh`](run_example.sh) downloads the dataset, runs the reference pipeline, then scores every task. Needs the API keys in `packages/model-pipeline/.env` (see [Model Pipeline](#model-pipeline-rootpackagesmodel-pipeline)).
 
 ## Results format (from pipeline)
 The results file provide the necessary interface for using the audio evaluation. Ensure that the following fields are present.
