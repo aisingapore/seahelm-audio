@@ -2,18 +2,12 @@
 dataset_info:
 - config_name: ifeval
   features:
-  - name: prompts
-    list:
-    - name: text
-      dtype: string
-  - name: metadata
-    struct:
-    - name: category
-      dtype: string
-    - name: language
-      dtype: string
-    - name: subcategory
-      dtype: string
+  - name: filename
+    dtype: string
+  - name: language
+    dtype: string
+  - name: text
+    dtype: string
   - name: kwargs
     list:
     - name: end_phrase
@@ -54,12 +48,14 @@ dataset_info:
       dtype: string
     - name: section_title
       dtype: string
-  - name: filename
-    dtype: string
-  - name: language
-    dtype: string
-  - name: text
-    dtype: string
+  - name: metadata
+    struct:
+    - name: category
+      dtype: string
+    - name: language
+      dtype: string
+    - name: subcategory
+      dtype: string
   - name: audio
     dtype:
       audio:
@@ -70,27 +66,30 @@ dataset_info:
     dtype: float64
   splits:
   - name: english
-    num_bytes: 44824433
+    num_bytes: 44807176
     num_examples: 105
   - name: indonesian
-    num_bytes: 60406000
+    num_bytes: 60386040
+    num_examples: 105
+  - name: malay
+    num_bytes: 63395174
     num_examples: 105
   - name: tamil
-    num_bytes: 59096627
+    num_bytes: 59040461
     num_examples: 105
-  download_size: 164218420
-  dataset_size: 164327060
+  download_size: 227562208
+  dataset_size: 227628851
 - config_name: mmlu_lite
   features:
   - name: filename
     dtype: string
-  - name: label
-    dtype: string
-  - name: subject
-    dtype: string
   - name: language
     dtype: string
   - name: text
+    dtype: string
+  - name: label
+    dtype: string
+  - name: subject
     dtype: string
   - name: audio
     dtype:
@@ -107,7 +106,7 @@ dataset_info:
   - name: english
     num_bytes: 641623682
     num_examples: 400
-  download_size: 1285120277
+  download_size: 1285120301
   dataset_size: 1285294117
 configs:
 - config_name: ifeval
@@ -116,6 +115,8 @@ configs:
     path: ifeval/english-*
   - split: indonesian
     path: ifeval/indonesian-*
+  - split: malay
+    path: ifeval/malay-*
   - split: tamil
     path: ifeval/tamil-*
 - config_name: mmlu_lite
@@ -142,22 +143,23 @@ tags:
 - voice-agents
 pretty_name: SEA-HELM Audio (OmniVoice Baseline)
 ---
+
 # Dataset Card for SEA-HELM Audio (OmniVoice Baseline)
+
+_[Last Update: 21 Oct 2026]_
 
 ## Dataset Summary
 
-**SEA-HELM Audio** is a multilingual voice benchmark designed to quantify the performance degradation introduced by the speech modality in end-to-end conversational voice stacks across Southeast Asian languages. 
+**SEA-HELM Audio** is a Southeast Asian multilingual voice benchmark designed to quantify the performance degradation introduced by the speech modality in end-to-end conversational voice stacks across Southeast Asian languages.
 
-Adapted from AI Singapore's text-based **SEA-HELM** (Southeast Asian Holistic Evaluation of Language Models) benchmark, this dataset provides a standardized input speech corpus generated exclusively using **OmniVoice**. By pairing synthesized input audio with ground-truth prompt text, the dataset enables **dual-branch evaluation** to isolate the ASR modality gap 
+Adapted from AI Singapore's text-based **SEA-HELM** (Southeast Asian Holistic Evaluation of Language Models) benchmark, this dataset provides a standardized input speech corpus generated exclusively using **OmniVoice**. By pairing synthesized input audio with ground-truth prompt text, the dataset enables **dual-branch evaluation** to isolate the ASR modality gap
 
-$$\Delta = \text{Acc}_{\text{text}} - \text{Acc}_{\text{speech}}$$ 
+$$\Delta (Modality Gap) = \text{Score}_{\text{text}} - \text{Score}_{\text{speech}}$$
 
 under deterministic, rule-based verification.
 
 ## Dataset Description
 
-- **Repository:** `github`
-- **Point of Contact:** `???`
 - **Developed by:** AI Products Pillar, AI Singapore
 - **Funded by:** National Research Foundation Singapore
 - **Shared by:** AI Products Pillar, AI Singapore
@@ -225,7 +227,7 @@ An example from the dataset looks as follows:
 
 ### Annotations
 
-No human annotations were added. The dataset relies on the ground-truth labels and rule-based verification scripts provided by the parent SEA-HELM benchmark.
+*No human annotations were added.* The dataset relies on the ground-truth labels and rule-based verification scripts provided by the parent SEA-HELM benchmark.
 
 
 ## Considerations for Using the Data
@@ -264,21 +266,25 @@ print("Audio Array Shape:", sample["audio"]["array"].shape)
 
 When evaluating a voice stack on this dataset, compare two parallel runs:
 
-1. **Text Branch:** Supply `prompt_text` directly to your LLM to obtain $\text{Acc}_{\text{text}}$.
+1. **Text Branch:** Supply `prompt_text` directly to your LLM to obtain Score<sub>text</sub>.
 
-2. **Speech Branch:** Pass the `audio` signal through your ASR model, then feed the resulting transcript to your LLM to obtain $\text{Acc}_{\text{speech}}$.
+2. **Speech Branch:** Pass the `audio` signal through your ASR model, then feed the resulting transcript to your LLM to obtain Score<sub>speech</sub>.
 
-
+**Repository:** [aisingapore/seahelm-audio](https://github.com/aisingapore/seahelm-audio/tree/main)
 
 ## Technical Report and Citation
 
 If you utilize this corpus or our methodology in your work, please cite the corresponding paper:
 
 ```
-@article{seahelm_Audio_bench_ta_ms_2026,
-  title={Evaluating Multilingual ASR-LLM Pipeline Performance Across Seahelm Subsets},
-  author={xxxx},
-  year={2026}
+@article{seahelm_audio_bench_en_zh_ta_ms_2026,
+    title={SEA-HELM Audio: Evaluating Multilingual ASR-LLM Pipeline Performance Across SEA-HELM Subsets}, 
+    author={Aulia Adila and Yixian Tan and Jonathan Heng and Kunat Pipatanakul and Donghang Wu and Anocha Sutaveephamochanon},
+    year={2026},
+    eprint={2610.19869},
+    archivePrefix={arXiv},
+    primaryClass={cs.SD},
+    url={https://arxiv.org/abs/2610.19869}, 
 }
 
 ```
@@ -292,4 +298,4 @@ This project is supported by the National Research Foundation Singapore and Info
 
 ## Contact
 
-[**sealion@aisingapore.org**](mailto:sealion@aisingapore.org)# SEA-HELM Audio Benchmark Corpus v0.1
+[**sealion@aisingapore.org**](mailto:sealion@aisingapore.org) 
