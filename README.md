@@ -16,9 +16,9 @@ Adapted from AI Singapore's text-based SEA-HELM (Southeast Asian Holistic Evalua
 The dataset card on Hugging Face describes the tasks and languages in detail. This README covers how to use the dataset to evaluate a voice stack.
 
 ## Links
-- Dataset: https://huggingface.co/datasets/aisingapore/seahelm-audio
-- Technical Report: <b>TO FILL IN</b>
-- Try out various combinations of voice agents: https://voice-agent.sea-lion.ai/playground/voice-agent
+- [Dataset](https://huggingface.co/datasets/aisingapore/seahelm-audio)
+- [Technical Report](https://arxiv.org/abs/2610.19869)
+- [Voice Agent Playground](https://voice-agent.sea-lion.ai/playground/voice-agent)
 
 ## Quickstart
 
