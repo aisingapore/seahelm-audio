@@ -13,7 +13,7 @@ SEA-HELM Audio is a multilingual voice benchmark designed to quantify the perfor
 
 Adapted from AI Singapore's text-based SEA-HELM (Southeast Asian Holistic Evaluation of Language Models) benchmark, this dataset provides a standardized input speech corpus generated exclusively using OmniVoice. By pairing synthesized input audio with ground-truth prompt text, the dataset enables dual-branch evaluation to isolate the ASR modality gap.
 
-The dataset card on Hugging Face describes the tasks and languages in detail. This README covers how to use the dataset to evaluate a voice stack.
+The [dataset card on Hugging Face](https://huggingface.co/datasets/aisingapore/seahelm-audio) describes the tasks, languages and data fields in detail. This README covers how to use the dataset to evaluate a voice stack.
 
 ## Links
 - Dataset: https://huggingface.co/datasets/aisingapore/seahelm-audio

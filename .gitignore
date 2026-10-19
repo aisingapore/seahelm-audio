@@ -52,6 +52,9 @@ outputs/**/summary.json
 # a run started from inside a package's src/ would otherwise be re-included by the line above
 packages/*/src/**/outputs/
 
+# dataset snapshot pulled by `audio-evaluation download`; the dataset card lives on the Hub only
+data/seahelm_audio_data/
+
 # staged prompt audio sets (the frozen sets live in seahelm-audio-uploader / HF; only manifests are tracked here)
 data/audio_sets/
 
