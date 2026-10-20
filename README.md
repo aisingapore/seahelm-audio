@@ -3,8 +3,10 @@
 # SEA-HELM Audio
 
 <p align="center">
-   <strong>An adaption of <a href="https://github.com/aisingapore/SEA-HELM">SEA-HELM</a> for speech agents</strong><br>
+   <strong>An adaption of <a href="https://github.com/aisingapore/SEA-HELM">SEA-HELM</a> for speech agents</strong><br><br>
+   <a href="https://arxiv.org/abs/2610.19869"><img src="https://img.shields.io/badge/TechnicalReport-arXiv-B31B1B?logo=arxiv&logoColor=white" alt="Technical Report"></a>
 </p>
+
 </div>
 
 ## Overview
