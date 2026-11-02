@@ -119,7 +119,7 @@ def run_sample(
 
     Returns:
         result (dict): ``filename``, ``language``, ``spoken_text`` (the dataset
-            prompt), ``transcript`` (STT output), ``reply`` (LLM output), ``audio_in``
+            prompt), ``transcript`` (STT output), ``response`` (LLM output), ``audio_in``
             (path of the extracted prompt WAV) and ``audio_out`` (path of the spoken
             reply, or None).
     """
@@ -142,7 +142,7 @@ def run_sample(
         "language": language,
         "spoken_text": row["text"],
         "transcript": transcript,
-        "reply": reply,
+        "response": reply,
         "audio_in": str(audio_in),
         "audio_out": audio_out,
     }

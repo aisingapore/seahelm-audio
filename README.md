@@ -73,7 +73,7 @@ The results file provide the necessary interface for using the audio evaluation.
 | `language` | ISO 639-1 code of the sample (`en`, `ms`, `zh`, ...)|
 | `spoken_text` | the dataset's prompt text, used as the WER/CER reference |
 | `transcript` | your STT output for the prompt audio, i.e. what the LLM saw |
-| `reply` | your system's answer to the prompt; used for scoring |
+| `response` | your system's answer to the prompt; used for scoring |
 
 Sample `JSONL` formatting
 
@@ -83,7 +83,7 @@ Sample `JSONL` formatting
   "language": "en",
   "spoken_text": "Could you give me a short summary of The Lord of the Rings that is child-friendly?\nFirst, repeat \"Could you give me a short summary ...\" word for word, then give your answer.",
   "transcript": "Could you give me a short summary of The Lord of the Rings that is child-friendly? First, repeat. Could you give me a short summary ... then give your answer.",
-  "reply": "Could you give me a short summary of The Lord of the Rings that is child-friendly? ... Frodo, a small hobbit, is given a magic ring ...",
+  "response": "Could you give me a short summary of The Lord of the Rings that is child-friendly? ... Frodo, a small hobbit, is given a magic ring ...",
   "audio_in": "outputs/pipeline/ifeval/audio_in/en/seahelm_ifeval_en_000001.wav",
   "audio_out": null
 }
@@ -92,7 +92,7 @@ Sample `JSONL` formatting
   "language": "zh",
   "spoken_text": "仅使用以下格式回答。\n\"答案:\"\n将 答案 替换为您选择的答案。使用字母 第一、第二、第三 或 第四 作为答案。\n\n问题:\n在月球上，最重的是什么？\n第一: 五千克羽毛\n第二: 一千克羽毛\n第三: 在地球上测量重五磅的砖\n第四: 一千克砖",
   "transcript": "仅使用以下格式回答答案，将答案替换为您选择的答案。使用字母第一、第二、第三或第四作为答案。问题：这在月球上最重的是什么？第一五千克羽毛，第二一千克羽毛，第三在地球上测量重五磅的砖，第四一千克砖。",
-  "reply": "第一",
+  "response": "第一",
   "audio_in": "outputs/pipeline/mmlu_lite/audio_in/zh/seahelm_global_mmlu_lite_zh_000001.wav",
   "audio_out": null
 }
