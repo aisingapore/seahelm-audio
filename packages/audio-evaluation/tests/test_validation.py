@@ -11,7 +11,7 @@ def _row(fn: str, lang: str = "en") -> dict:
         "language": lang,
         "spoken_text": "a",
         "transcript": "a",
-        "reply": "a",
+        "response": "a",
     }
 
 

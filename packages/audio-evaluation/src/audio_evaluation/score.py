@@ -1,7 +1,7 @@
 """Join result rows with gold and score both arms (ported from ``SeaHelmStage.score``).
 
 Each result row (from ``model-pipeline``) carries ``filename, language, spoken_text,
-transcript, reply``: ``reply`` is the LLM's answer to the ASR transcript, so its score
+transcript, response``: ``response`` is the LLM's answer to the ASR transcript, so its score
 (``asr_score``) is the cascade's score. The scorer never calls a model.
 """
 
@@ -14,7 +14,7 @@ from .tasks.ifeval import scoring as ifeval_scoring
 from .tasks.mcq import scoring as mcq_scoring
 from .tasks.qa import scoring as qa_scoring
 
-REQUIRED_KEYS = ("filename", "language", "spoken_text", "transcript", "reply")
+REQUIRED_KEYS = ("filename", "language", "spoken_text", "transcript", "response")
 
 
 def validate_rows(rows: list[dict]) -> list[str]:
@@ -172,7 +172,7 @@ def score_row(
     record["word_error_rate"] = wer_cer.get("word_error_rate")
     record["character_error_rate"] = wer_cer["character_error_rate"]
 
-    result = _score_arm(spec, row["reply"], gold, language)
+    result = _score_arm(spec, row["response"], gold, language)
     record["asr_score"] = result.pop("score")
     for k, v in result.items():
         record[f"asr_{k}"] = v
